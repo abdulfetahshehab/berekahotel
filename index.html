@@ -1,0 +1,2783 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Berekah Hotel</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar berekah-navbar" id="mainNavbar">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand berekah-logo" href="#home">
+          <span class="logo-icon">
+            <i class="bi bi-cup-hot-fill"></i>
+          </span>
+
+          <span class="logo-text">
+            <span class="hotel-name">BEREKAH</span>
+            <span class="hotel-subtitle">HOTEL & RESTAURANT</span>
+          </span>
+        </a>
+
+        <!-- Navigation Links -->
+        <div class="navbar-menu" id="navbarMenu">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#about"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#menu"> Menu </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#service"> Service </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#rooms"> Guest House/Room </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#venues"> Venues/Hall </a>
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side Actions -->
+        <div class="navbar-actions">
+          <!-- Cart -->
+          <button
+            class="cart-btn"
+            id="cartButton"
+            type="button"
+            aria-label="Shopping cart"
+          >
+            <i class="bi bi-bag"></i>
+
+            <span class="cart-count" id="cartCount"> 0 </span>
+          </button>
+
+          <!-- Order Now -->
+          <a href="#menu" class="order-btn">
+            <span>Order Now</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            id="navbarToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+    <section class="hero-section" id="home">
+      <!-- Background Slider -->
+      <div class="hero-background">
+        <!-- Slide 1 -->
+        <div
+          class="hero-slide active"
+          style="background-image: url(images/burger5.jfif)"
+        ></div>
+
+        <!-- Slide 2 -->
+        <div
+          class="hero-slide"
+          style="background-image: url(images/pizza3.jfif)"
+        ></div>
+
+        <!-- Slide 3 -->
+        <div
+          class="hero-slide"
+          style="background-image: url(images/juice1.jfif)"
+        ></div>
+
+        <!-- Slide 4 -->
+        <div
+          class="hero-slide"
+          style="background-image: url(images/new1.jfif)"
+        ></div>
+
+        <!-- Slide 5 -->
+        <div
+          class="hero-slide"
+          style="background-image: url(images/plate.jfif)"
+        ></div>
+      </div>
+
+      <!-- Dark Overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Hero Content -->
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Small Label -->
+          <div class="hero-label">
+            <span></span>
+            BEREKAH HOTEL & RESTAURANT
+            <span></span>
+          </div>
+
+          <!-- Motto -->
+          <h1 class="hero-title">
+            <span>Good Food, Good Mood</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="hero-description">
+            Order your favourite meals & drinks from Berekah Hotel. Freshly
+            prepared and delivered to your table or doorstep.
+          </p>
+
+          <!-- Order Button -->
+          <a href="#menu" class="hero-order-btn">
+            <i class="bi bi-bag-fill"></i>
+
+            <span>Order Now</span>
+
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Previous Button -->
+      <button
+        class="hero-arrow hero-prev"
+        id="heroPrev"
+        type="button"
+        aria-label="Previous slide"
+      >
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <!-- Next Button -->
+      <button
+        class="hero-arrow hero-next"
+        id="heroNext"
+        type="button"
+        aria-label="Next slide"
+      >
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+      <!-- Slider Indicators -->
+      <div class="hero-indicators" id="heroIndicators">
+        <button
+          class="hero-dot active"
+          type="button"
+          data-slide="0"
+          aria-label="Go to slide 1"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          data-slide="1"
+          aria-label="Go to slide 2"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          data-slide="2"
+          aria-label="Go to slide 3"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          data-slide="3"
+          aria-label="Go to slide 4"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          data-slide="4"
+          aria-label="Go to slide 5"
+        ></button>
+      </div>
+
+      <!-- Scroll Down -->
+      <a href="#about" class="hero-scroll">
+        <span class="scroll-icon">
+          <i class="bi bi-chevron-down"></i>
+        </span>
+
+        <span>Scroll Down</span>
+      </a>
+    </section>
+
+    <!-- =====================================================
+     ABOUT SECTION
+===================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- About Image -->
+          <div class="col-lg-6">
+            <div class="about-image-wrapper">
+              <div class="about-image">
+                <img src="images/rest.jfif" alt="Berekah Hotel food" />
+              </div>
+              <div class="about-image-frame"></div>
+              <div class="about-experience">
+                <span class="experience-number">B</span>
+                <span class="experience-text">Berekah<br />Hotel</span>
+              </div>
+            </div>
+          </div>
+          <!-- About Content -->
+          <div class="col-lg-6">
+            <div class="about-content">
+              <div class="section-label">
+                <span></span>
+                ABOUT BEREKAH
+              </div>
+              <h2 class="about-title">
+                A Place Where
+                <span>Good Taste</span>
+                Feels Like Home
+              </h2>
+              <p class="about-description">
+                At Berekah Hotel & Restaurant, we believe that great food is
+                more than a meal. It is an experience that brings people
+                together.
+              </p>
+              <p class="about-description">
+                From carefully prepared traditional dishes to delicious
+                international favorites and refreshing drinks, every item is
+                prepared with quality ingredients and attention to detail.
+              </p>
+              <!-- Features -->
+              <div class="about-features">
+                <div class="about-feature">
+                  <div class="feature-icon">
+                    <i class="bi bi-stars"></i>
+                  </div>
+                  <div>
+                    <h5>Quality Food</h5>
+                    <p>Fresh ingredients and carefully prepared meals.</p>
+                  </div>
+                </div>
+                <div class="about-feature">
+                  <div class="feature-icon">
+                    <i class="bi bi-heart"></i>
+                  </div>
+                  <div>
+                    <h5>Made With Care</h5>
+                    <p>Every dish is prepared with passion and attention.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- CTA -->
+              <a href="#menu" class="about-btn">
+                Explore Our Menu
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     MENU SECTION
+===================================================== -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <!-- Section Heading -->
+        <div class="menu-heading text-center">
+          <div class="section-label justify-content-center">
+            <span></span>
+            OUR MENU
+            <span></span>
+          </div>
+          <h2 class="menu-title">Taste Something <span>Special</span></h2>
+          <p class="menu-subtitle">
+            Discover our carefully prepared dishes, delicious drinks, and
+            traditional favorites made for every occasion.
+          </p>
+        </div>
+        <!-- Category Filter -->
+        <div class="menu-filter" id="menuFilter">
+          <button
+            class="menu-filter-btn active"
+            type="button"
+            data-category="all"
+          >
+            All
+          </button>
+          <button class="menu-filter-btn" type="button" data-category="burger">
+            Burgers
+          </button>
+          <button class="menu-filter-btn" type="button" data-category="pizza">
+            Pizza
+          </button>
+          <button class="menu-filter-btn" type="button" data-category="hanid">
+            Hanid
+          </button>
+          <button
+            class="menu-filter-btn"
+            type="button"
+            data-category="breakfast"
+          >
+            Breakfast
+          </button>
+          <button class="menu-filter-btn" type="button" data-category="drink">
+            Drinks
+          </button>
+          <button
+            class="menu-filter-btn"
+            type="button"
+            data-category="traditional"
+          >
+            Traditional
+          </button>
+        </div>
+        <!-- Menu Grid -->
+        <div class="row g-4" id="menuGrid">
+          <!-- Burger -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="burger"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/burger2.jfif" alt="Berekah Special Burger" />
+                <span class="food-category">Burger</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Berekah Special Burger</h3>
+                <p class="food-description">
+                  Juicy beef, fresh vegetables, cheese and our special sauce.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 450</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Berekah Special Burger"
+                    data-price="450"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pizza -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="pizza"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/pizza3.jfif" alt="Berekah Special Pizza" />
+                <span class="food-category">Pizza</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Berekah Special Pizza</h3>
+                <p class="food-description">
+                  Freshly baked pizza with cheese, vegetables and delicious
+                  toppings.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 650</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Berekah Special Pizza"
+                    data-price="650"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Hanid -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="hanid"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/hanid.jfif" alt="Traditional Hanid" />
+                <span class="food-category">Traditional</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Special Hanid</h3>
+                <p class="food-description">
+                  Tender, flavorful meat slowly prepared with traditional rice.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 850</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Special Hanid"
+                    data-price="850"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="hanid"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/hanid1.jfif" alt="Creamy Hanid" />
+                <span class="food-category">Hanid</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Creamy Special Hanid</h3>
+                <p class="food-description">
+                  Creamy Hanid prepared with fresh vegitables, rice and special
+                  meat.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 520</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Creamy Special Hanid"
+                    data-price="520"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Juice -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="drink"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/juice1.jfif" alt="Fresh Mixed Juice" />
+                <span class="food-category">Drink</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Fresh Mixed Juice</h3>
+                <p class="food-description">
+                  A refreshing combination of freshly squeezed seasonal fruits.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 180</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Fresh Mixed Juice"
+                    data-price="180"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- breakfast -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="breakfast"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/chechebsa.jfif" alt="chechebsa" />
+                <span class="food-category">Chechebsa</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Berekah Chechebsa</h3>
+                <p class="food-description">
+                  Its is delicious Ethiopian Breakfast meal
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 250</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Special chechebsa"
+                    data-price="250"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="breakfast"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/firfir1.jfif" alt="Local Firfir" />
+                <span class="food-category">Firfir</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Special Firfir</h3>
+                <p class="food-description">
+                  It is enjera firfir with enqulala tibs.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 400</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Special Firfir"
+                    data-price="400"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="breakfast"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/bf1.jfif" alt="local enqulal" />
+                <span class="food-category">Enqulal</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Special Enqulal</h3>
+                <p class="food-description">
+                  Special Enqulal breakfast with many ingredients and Donats.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 400</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Special Enqulal"
+                    data-price="400"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Traditional -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="traditional"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/beyeaynet.jfif" alt="Traditional beyeaynet" />
+                <span class="food-category">Beyeaynet</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Special Beyeaynet</h3>
+                <p class="food-description">
+                  Ethiopian most dominant, flavour full and multi-content
+                  special food with net and quality presentation .
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 600</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Special beyeaynet"
+                    data-price="600"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chicken Burger -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="burger"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/burger4.jfif" alt="Chicken Burger" />
+                <span class="food-category">Burger</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Crispy Chicken Burger</h3>
+                <p class="food-description">
+                  Crispy chicken, fresh lettuce and our signature creamy sauce.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 400</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Crispy Chicken Burger"
+                    data-price="400"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Vegetable Pizza -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="pizza"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/vegPizza.jfif" alt="Vegetable Pizza" />
+                <span class="food-category">Pizza</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Garden Vegetable Pizza</h3>
+                <p class="food-description">
+                  Fresh vegetables, mozzarella and herbs on a crispy golden
+                  base.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 580</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Garden Vegetable Pizza"
+                    data-price="580"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Coffee -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 menu-item"
+            data-category="drink"
+          >
+            <div class="food-card">
+              <div class="food-image">
+                <img src="images/coffee.jfif" alt="Berekah Coffee" />
+                <span class="food-category">Drink</span>
+                <button
+                  class="food-favorite"
+                  type="button"
+                  aria-label="Add to favorites"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="food-info">
+                <h3 class="food-name">Berekah Coffee</h3>
+                <p class="food-description">
+                  Freshly prepared aromatic coffee served hot and smooth.
+                </p>
+                <div class="food-bottom">
+                  <div class="food-price"><span>ETB</span> 120</div>
+                  <button
+                    class="add-cart-btn"
+                    type="button"
+                    data-product="Berekah Coffee"
+                    data-price="120"
+                  >
+                    <i class="bi bi-plus-lg"></i>
+                    <span>Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- View Full Menu -->
+        <div class="menu-more text-center">
+          <button class="menu-more-btn" type="button" id="showMoreMenu">
+            View Full Menu
+            <i class="bi bi-arrow-down"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     bedroom SECTION
+===================================================== -->
+    <section class="rooms-section" id="rooms">
+      <div class="container">
+        <div class="rooms-heading text-center">
+          <div class="section-label justify-content-center">
+            <span></span>
+            STAY WITH US
+            <span></span>
+          </div>
+          <h2 class="rooms-title">
+            Comfortable Rooms, <span>Beautiful Stays</span>
+          </h2>
+          <p class="rooms-subtitle">
+            Relax in our comfortable guesthouse rooms, designed to make your
+            stay peaceful, convenient, and memorable.
+          </p>
+        </div>
+        <div class="rooms-showcase">
+          <div class="room-card room-card-large">
+            <div class="room-image">
+              <img src="images/bed1.jfif" alt="Deluxe Guest Room" />
+              <div class="room-image-overlay"></div>
+              <span class="room-badge"
+                ><i class="bi bi-star-fill"></i> Featured</span
+              >
+              <button
+                class="room-favorite"
+                type="button"
+                aria-label="Add room to favorites"
+              >
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="room-price-overlay">
+                <span>From</span>
+                <strong>ETB 1,500</strong>
+                <small>/ night</small>
+              </div>
+            </div>
+            <div class="room-info">
+              <div class="room-top">
+                <div>
+                  <span class="room-type">Deluxe Room</span>
+                  <h3>Deluxe Guest Room</h3>
+                </div>
+                <div class="room-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <span>4.9</span>
+                </div>
+              </div>
+              <p>
+                Spacious and beautifully furnished room with a comfortable bed
+                and a relaxing atmosphere.
+              </p>
+              <div class="room-features">
+                <span><i class="bi bi-person-fill"></i> 2 Guests</span>
+                <span><i class="bi bi-wifi"></i> Free Wi-Fi</span>
+                <span><i class="bi bi-tv"></i> Smart TV</span>
+                <span><i class="bi bi-snow"></i> AC</span>
+              </div>
+              <button
+                class="room-book-btn"
+                type="button"
+                data-room="Deluxe Guest Room"
+                data-price="1500"
+              >
+                <span>Book This Room</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-image">
+              <img src="images/bed5.jfif" alt="Standard Guest Room" />
+              <div class="room-image-overlay"></div>
+              <span class="room-badge available"
+                ><i class="bi bi-check-circle-fill"></i> Available</span
+              >
+              <button
+                class="room-favorite"
+                type="button"
+                aria-label="Add room to favorites"
+              >
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="room-price-overlay">
+                <span>From</span>
+                <strong>ETB 1,000</strong>
+                <small>/ night</small>
+              </div>
+            </div>
+            <div class="room-info">
+              <div class="room-top">
+                <div>
+                  <span class="room-type">Standard Room</span>
+                  <h3>Comfort Guest Room</h3>
+                </div>
+                <div class="room-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <span>4.7</span>
+                </div>
+              </div>
+              <p>
+                A cozy room with everything you need for a comfortable and
+                relaxing stay.
+              </p>
+              <div class="room-features">
+                <span><i class="bi bi-person-fill"></i> 2 Guests</span>
+                <span><i class="bi bi-wifi"></i> Free Wi-Fi</span>
+                <span><i class="bi bi-tv"></i> TV</span>
+                <span><i class="bi bi-cup-hot"></i> Breakfast</span>
+              </div>
+              <button
+                class="room-book-btn"
+                type="button"
+                data-room="Comfort Guest Room"
+                data-price="1000"
+              >
+                <span>Book This Room</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-image">
+              <img src="images/bed7.jfif" alt="Family Guest Room" />
+              <div class="room-image-overlay"></div>
+              <span class="room-badge"
+                ><i class="bi bi-people-fill"></i> Family</span
+              >
+              <button
+                class="room-favorite"
+                type="button"
+                aria-label="Add room to favorites"
+              >
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="room-price-overlay">
+                <span>From</span>
+                <strong>ETB 4,000</strong>
+                <small>/ night</small>
+              </div>
+            </div>
+            <div class="room-info">
+              <div class="room-top">
+                <div>
+                  <span class="room-type">Family Room</span>
+                  <h3>Family Guest Room</h3>
+                </div>
+                <div class="room-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+              <p>
+                A spacious family-friendly room with extra space for a
+                comfortable group stay.
+              </p>
+              <div class="room-features">
+                <span><i class="bi bi-people-fill"></i> 4 Guests</span>
+                <span><i class="bi bi-wifi"></i> Free Wi-Fi</span>
+                <span><i class="bi bi-tv"></i> Smart TV</span>
+                <span><i class="bi bi-snow"></i> AC</span>
+              </div>
+              <button
+                class="room-book-btn"
+                type="button"
+                data-room="Family Guest Room"
+                data-price="4000"
+              >
+                <span>Book This Room</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="rooms-cta">
+          <div>
+            <span>Need a longer stay?</span>
+            <strong>Contact us for special room rates.</strong>
+          </div>
+          <a href="#contact" class="rooms-contact-btn"
+            >Contact Us <i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     SERVICES SECTION
+===================================================== -->
+    <section class="service-section" id="service">
+      <div class="container">
+        <div class="service-heading">
+          <span class="section-label">
+            <i class="bi bi-stars"></i>BEREKAH HOTEL SERVICES
+          </span>
+          <h2>Everything You <span>Need</span></h2>
+          <p>
+            Enjoy comfortable stays, convenient facilities, and premium services
+            at Berekah Hotel.
+          </p>
+        </div>
+        <div class="row service-grid">
+          <div class="service-card-wrap col-6 col-md-4 col-lg-3">
+            <div class="service-card">
+              <span class="service-icon">
+                <i class="bi bi-cup-hot"></i>
+              </span>
+              <span class="service-text">
+                <span class="service-name">Special Lounge</span>
+                <span class="service-subtitle"
+                  >Relax and enjoy a comfortable private lounge</span
+                >
+              </span>
+            </div>
+          </div>
+
+          <div class="service-card-wrap col-6 col-md-4 col-lg-3">
+            <div class="service-card">
+              <span class="service-icon">
+                <i class="bi bi-airplane"></i>
+              </span>
+              <span class="service-text">
+                <span class="service-name">Airport Service</span>
+                <span class="service-subtitle"
+                  >Convenient airport pickup and transfer service</span
+                >
+              </span>
+            </div>
+          </div>
+
+          <div class="service-card-wrap col-6 col-md-4 col-lg-3">
+            <div class="service-card">
+              <span class="service-icon">
+                <i class="bi bi-easel2"></i>
+              </span>
+              <span class="service-text">
+                <span class="service-name">Conference Hall</span>
+                <span class="service-subtitle"
+                  >A professional space for meetings and events</span
+                >
+              </span>
+            </div>
+          </div>
+
+          <div class="service-card-wrap col-6 col-md-4 col-lg-3">
+            <div class="service-card">
+              <span class="service-icon">
+                <i class="bi bi-heart-pulse"></i>
+              </span>
+              <span class="service-text">
+                <span class="service-name">Fitness Center</span>
+                <span class="service-subtitle"
+                  >Stay active with our modern fitness facilities</span
+                >
+              </span>
+            </div>
+          </div>
+
+          <div class="service-card-wrap col-6 col-md-4 col-lg-3">
+            <div class="service-card">
+              <span class="service-icon">
+                <i class="bi bi-bell"></i>
+              </span>
+              <span class="service-text">
+                <span class="service-name">Room Service</span>
+                <span class="service-subtitle"
+                  >Enjoy convenient service from the comfort of your room</span
+                >
+              </span>
+            </div>
+          </div>
+
+          <div class="service-card-wrap col-6 col-md-4 col-lg-3">
+            <div class="service-card">
+              <span class="service-icon">
+                <i class="bi bi-p-square"></i>
+              </span>
+              <span class="service-text">
+                <span class="service-name">Parking</span>
+                <span class="service-subtitle"
+                  >Secure and spacious parking for our guests</span
+                >
+              </span>
+            </div>
+          </div>
+
+          <div class="service-card-wrap col-6 col-md-4 col-lg-3">
+            <div class="service-card">
+              <span class="service-icon">
+                <i class="bi bi-gem"></i>
+              </span>
+              <span class="service-text">
+                <span class="service-name">VIP Service</span>
+                <span class="service-subtitle"
+                  >Premium hospitality with personalized attention</span
+                >
+              </span>
+            </div>
+          </div>
+
+          <div class="service-card-wrap col-6 col-md-4 col-lg-3">
+            <div class="service-card">
+              <span class="service-icon">
+                <i class="bi bi-balloon"></i>
+              </span>
+              <span class="service-text">
+                <span class="service-name">Wedding & Event Venues</span>
+                <span class="service-subtitle"
+                  >Elegant spaces for weddings and special events</span
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     VENUE SECTION
+===================================================== -->
+
+    <section class="venue-section" id="venues">
+      <div class="container">
+        <div class="venue-heading">
+          <span class="section-label">
+            <i class="bi bi-building"></i> CONFERENCE & EVENTS
+          </span>
+          <h2>Spaces For Your <span>Special Moments</span></h2>
+          <p>
+            From professional meetings to unforgettable celebrations, Berekah
+            Hotel offers flexible spaces for every occasion.
+          </p>
+        </div>
+        <div class="row venue-grid">
+          <!-- Small Conference Hall -->
+          <div class="col-12 col-md-6 venue-card-wrap">
+            <div class="venue-card">
+              <div class="venue-image">
+                <img
+                  src="images/conference-small.jfif"
+                  alt="Small Conference Hall"
+                />
+                <span class="venue-badge">
+                  <i class="bi bi-briefcase"></i>
+                  Conference
+                </span>
+              </div>
+
+              <div class="venue-content">
+                <div class="venue-title-row">
+                  <div>
+                    <span class="venue-type">SMALL HALL</span>
+                    <h3>Small Conference Hall</h3>
+                  </div>
+                  <span class="venue-icon">
+                    <i class="bi bi-easel2"></i>
+                  </span>
+                </div>
+
+                <p>
+                  A comfortable and professional space for meetings, trainings,
+                  workshops and small conferences.
+                </p>
+
+                <div class="venue-features">
+                  <span>
+                    <i class="bi bi-people"></i>
+                    Small Groups (5-200)
+                  </span>
+                  <span>
+                    <i class="bi bi-projector"></i>
+                    Presentation
+                  </span>
+                </div>
+
+                <writing_block
+                  id="58321"
+                  variant="document"
+                  title="Small Conference Hall button"
+                >
+                  <button
+                    class="venue-btn"
+                    type="button"
+                    data-venue="Small Conference Hall"
+                  >
+                    <span>Inquire Now</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </writing_block>
+              </div>
+            </div>
+          </div>
+
+          <!-- Large Conference Hall -->
+          <div class="col-12 col-md-6 venue-card-wrap">
+            <div class="venue-card">
+              <div class="venue-image">
+                <img
+                  src="images/conference-larg.jfif"
+                  alt="Large Conference Hall"
+                />
+                <span class="venue-badge">
+                  <i class="bi bi-briefcase"></i>
+                  Conference
+                </span>
+              </div>
+
+              <div class="venue-content">
+                <div class="venue-title-row">
+                  <div>
+                    <span class="venue-type">LARGE HALL</span>
+                    <h3>Large Conference Hall</h3>
+                  </div>
+                  <span class="venue-icon">
+                    <i class="bi bi-easel"></i>
+                  </span>
+                </div>
+
+                <p>
+                  A spacious venue designed for large conferences, corporate
+                  events, seminars and major gatherings.
+                </p>
+
+                <div class="venue-features">
+                  <span>
+                    <i class="bi bi-people"></i>
+                    Large Groups (500-2000)
+                  </span>
+                  <span>
+                    <i class="bi bi-mic"></i>
+                    Events & Seminars
+                  </span>
+                </div>
+
+                <writing_block
+                  id="71406"
+                  variant="document"
+                  title="Large Conference Hall button"
+                >
+                  <button
+                    class="venue-btn"
+                    type="button"
+                    data-venue="Large Conference Hall"
+                  >
+                    <span>Inquire Now</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </writing_block>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small Wedding & Event Venue -->
+          <div class="col-12 col-md-6 venue-card-wrap">
+            <div class="venue-card">
+              <div class="venue-image">
+                <img
+                  src="images/event-small3.jfif"
+                  alt="Small Wedding and Event Venue"
+                />
+                <span class="venue-badge">
+                  <i class="bi bi-balloon-heart"></i>
+                  Wedding & Events
+                </span>
+              </div>
+
+              <div class="venue-content">
+                <div class="venue-title-row">
+                  <div>
+                    <span class="venue-type">SMALL VENUE</span>
+                    <h3>Small Wedding & Event Venue</h3>
+                  </div>
+                  <span class="venue-icon">
+                    <i class="bi bi-balloon-heart"></i>
+                  </span>
+                </div>
+
+                <p>
+                  An intimate setting for small weddings, birthdays, family
+                  celebrations and private events.
+                </p>
+
+                <div class="venue-features">
+                  <span>
+                    <i class="bi bi-hearts"></i>
+                    Intimate Events (=< 200)
+                  </span>
+                  <span>
+                    <i class="bi bi-music-note-beamed"></i>
+                    Celebrations
+                  </span>
+                </div>
+
+                <writing_block
+                  id="32694"
+                  variant="document"
+                  title="Small Wedding and Event Venue button"
+                >
+                  <button
+                    class="venue-btn"
+                    type="button"
+                    data-venue="Small Wedding & Event Venue"
+                  >
+                    <span>Inquire Now</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </writing_block>
+              </div>
+            </div>
+          </div>
+
+          <!-- Large Wedding & Event Venue -->
+          <div class="col-12 col-md-6 venue-card-wrap">
+            <div class="venue-card">
+              <div class="venue-image">
+                <img
+                  src="images/event-larg.jfif"
+                  alt="Large Wedding and Event Venue"
+                />
+                <span class="venue-badge">
+                  <i class="bi bi-balloon-heart"></i>
+                  Wedding & Events
+                </span>
+              </div>
+
+              <div class="venue-content">
+                <div class="venue-title-row">
+                  <div>
+                    <span class="venue-type">LARGE VENUE</span>
+                    <h3>Large Wedding & Event Venue</h3>
+                  </div>
+                  <span class="venue-icon">
+                    <i class="bi bi-stars"></i>
+                  </span>
+                </div>
+
+                <p>
+                  A spacious and elegant venue for weddings, receptions, large
+                  celebrations and special occasions.
+                </p>
+
+                <div class="venue-features">
+                  <span>
+                    <i class="bi bi-people"></i>
+                    Large Gatherings (=< 1000)
+                  </span>
+                  <span>
+                    <i class="bi bi-stars"></i>
+                    Special Events
+                  </span>
+                </div>
+
+                <writing_block
+                  id="84157"
+                  variant="document"
+                  title="Large Wedding and Event Venue button"
+                >
+                  <button
+                    class="venue-btn"
+                    type="button"
+                    data-venue="Large Wedding & Event Venue"
+                  >
+                    <span>Inquire Now</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </writing_block>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CHECKOUT SECTION ==================== -->
+
+    <section class="checkout-section" id="checkout">
+      <div class="checkout-container">
+        <div class="checkout-heading">
+          <span class="section-label">
+            <i class="bi bi-bag-check"></i> COMPLETE YOUR ORDER
+          </span>
+          <h2>Checkout <span>Now</span></h2>
+          <p>Enter your details and review your order before placing it.</p>
+        </div>
+
+        <div class="checkout-grid">
+          <!-- Customer Information -->
+          <div class="checkout-form-card">
+            <div class="checkout-card-header">
+              <div class="checkout-card-icon">
+                <i class="bi bi-person"></i>
+              </div>
+              <div>
+                <h3>Your Information</h3>
+                <p>Tell us where to deliver your order.</p>
+              </div>
+            </div>
+
+            <form id="checkoutForm">
+              <div class="checkout-fields">
+                <div class="checkout-field">
+                  <label for="checkoutName">Full Name</label>
+                  <div class="checkout-input">
+                    <i class="bi bi-person"></i>
+                    <input
+                      type="text"
+                      id="checkoutName"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="checkout-field">
+                  <label for="checkoutPhone">Phone Number</label>
+                  <div class="checkout-input">
+                    <i class="bi bi-telephone"></i>
+                    <input
+                      type="tel"
+                      id="checkoutPhone"
+                      placeholder="+251 9XX XXX XXX"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="checkout-field checkout-full">
+                  <label>Order Type</label>
+
+                  <div class="order-type-options">
+                    <label class="order-type-option">
+                      <input
+                        type="radio"
+                        name="orderType"
+                        value="delivery"
+                        checked
+                      />
+                      <span class="order-type-content">
+                        <i class="bi bi-bicycle"></i>
+                        <span>
+                          <strong>Delivery</strong>
+                          <small>Deliver to my location</small>
+                        </span>
+                      </span>
+                    </label>
+
+                    <label class="order-type-option">
+                      <input type="radio" name="orderType" value="pickup" />
+                      <span class="order-type-content">
+                        <i class="bi bi-shop"></i>
+                        <span>
+                          <strong>Pickup</strong>
+                          <small>I'll collect my order</small>
+                        </span>
+                      </span>
+                    </label>
+
+                    <label class="order-type-option">
+                      <input type="radio" name="orderType" value="dine-in" />
+                      <span class="order-type-content">
+                        <i class="bi bi-cup-hot"></i>
+                        <span>
+                          <strong>Dine-in</strong>
+                          <small>Enjoy it at Berekah</small>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <div
+                  class="checkout-field checkout-full"
+                  id="deliveryAddressField"
+                >
+                  <label for="deliveryAddress">Delivery Address</label>
+                  <div class="checkout-input checkout-textarea">
+                    <i class="bi bi-geo-alt"></i>
+                    <textarea
+                      id="deliveryAddress"
+                      rows="3"
+                      placeholder="Enter your delivery address"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div
+                  class="checkout-field checkout-full"
+                  id="deliveryDistanceField"
+                >
+                  <label for="deliveryDistance">Delivery Distance</label>
+
+                  <select id="deliveryDistance" class="checkout-select">
+                    <option value="150" data-range="1–5 km">
+                      1–5 km — ETB 150
+                    </option>
+                    <option value="200" data-range="5–10 km">
+                      5–10 km — ETB 200
+                    </option>
+                    <option value="300" data-range="10–20 km">
+                      10–20 km — ETB 300
+                    </option>
+                  </select>
+
+                  <div class="delivery-price-info">
+                    <i class="bi bi-bicycle"></i>
+                    <div>
+                      <strong>Delivery Fee</strong>
+                      <span
+                        >1–5 km: ETB 150 · 5–10 km: ETB 200 · 10–20 km: ETB
+                        300</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="checkout-field checkout-full hidden-checkout-field"
+                  id="tableRoomField"
+                >
+                  <label for="tableRoomNumber">Table / Room Number</label>
+                  <div class="checkout-input">
+                    <i class="bi bi-door-open"></i>
+                    <input
+                      type="text"
+                      id="tableRoomNumber"
+                      placeholder="Enter table or room number"
+                    />
+                  </div>
+                </div>
+
+                <div class="checkout-field checkout-full">
+                  <label>Payment Method</label>
+
+                  <div class="payment-method-options">
+                    <label class="payment-method-option">
+                      <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="cbe"
+                        checked
+                      />
+                      <span class="payment-method-content">
+                        <span class="payment-method-logo">CBE</span>
+                        <span>
+                          <strong>Commercial Bank of Ethiopia</strong>
+                          <small>Pay through CBE</small>
+                        </span>
+                        <i class="bi bi-check-circle-fill"></i>
+                      </span>
+                    </label>
+
+                    <label class="payment-method-option">
+                      <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="telebirr"
+                      />
+                      <span class="payment-method-content">
+                        <span class="payment-method-logo">T</span>
+                        <span>
+                          <strong>Telebirr</strong>
+                          <small>Pay using Telebirr</small>
+                        </span>
+                        <i class="bi bi-check-circle-fill"></i>
+                      </span>
+                    </label>
+
+                    <label class="payment-method-option">
+                      <input type="radio" name="paymentMethod" value="ebirr" />
+                      <span class="payment-method-content">
+                        <span class="payment-method-logo">E</span>
+                        <span>
+                          <strong>E-Birr</strong>
+                          <small>Pay using E-Birr</small>
+                        </span>
+                        <i class="bi bi-check-circle-fill"></i>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <div
+                  class="payment-instructions checkout-full"
+                  id="paymentInstructions"
+                >
+                  <div class="payment-instructions-icon">
+                    <i class="bi bi-bank"></i>
+                  </div>
+
+                  <div class="payment-instructions-content">
+                    <h4 id="paymentTitle">Commercial Bank of Ethiopia</h4>
+                    <p id="paymentDescription">
+                      Transfer the order amount to our CBE account.
+                    </p>
+
+                    <div class="payment-account">
+                      <span id="paymentAccountLabel">CBE Account Number</span>
+                      <strong id="paymentAccount">1000301369992</strong>
+                      <button
+                        type="button"
+                        id="copyPaymentAccount"
+                        aria-label="Copy payment account"
+                      >
+                        <i class="bi bi-copy"></i>
+                      </button>
+                    </div>
+
+                    <div class="payment-note">
+                      <i class="bi bi-info-circle"></i>
+                      <span>
+                        After completing the payment, keep your
+                        transaction/reference number. You will provide it below.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="checkout-field checkout-full">
+                  <label for="paymentReference">
+                    Payment Reference <span>(Required)</span>
+                  </label>
+
+                  <div class="checkout-input">
+                    <i class="bi bi-receipt"></i>
+                    <input
+                      type="text"
+                      id="paymentReference"
+                      placeholder="Enter your transaction/reference number"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="checkout-field checkout-full">
+                  <label for="checkoutNotes"
+                    >Order Notes <span>(Optional)</span></label
+                  >
+                  <div class="checkout-input checkout-textarea">
+                    <i class="bi bi-chat-left-text"></i>
+                    <textarea
+                      id="checkoutNotes"
+                      rows="3"
+                      placeholder="Any special requests?"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout-notice">
+                <i class="bi bi-shield-check"></i>
+                <div>
+                  <strong>Secure Order</strong>
+                  <p>Your order details will be handled securely.</p>
+                </div>
+              </div>
+
+              <button class="place-order-btn" id="placeOrderBtn" type="submit">
+                <span>Place Order</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="checkout-summary-card">
+            <div class="checkout-card-header">
+              <div class="checkout-card-icon">
+                <i class="bi bi-receipt"></i>
+              </div>
+              <div>
+                <h3>Your Order</h3>
+                <p>Review your selected items.</p>
+              </div>
+            </div>
+
+            <div class="checkout-summary-items" id="checkoutSummaryItems">
+              <div class="checkout-summary-empty">
+                <i class="bi bi-bag-x"></i>
+                <h4>Your cart is empty</h4>
+                <p>Add some delicious food from our menu.</p>
+                <button type="button" id="checkoutBrowseMenu">
+                  Browse Menu
+                  <i class="bi bi-arrow-down"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="checkout-summary-bottom" id="checkoutSummaryBottom">
+              <div class="checkout-price-row">
+                <span>Subtotal</span>
+                <strong id="checkoutSubtotal">ETB 0</strong>
+              </div>
+
+              <div class="checkout-price-row">
+                <span>Delivery</span>
+                <strong id="checkoutDelivery">ETB 0</strong>
+              </div>
+
+              <div class="checkout-price-total">
+                <span>Total</span>
+                <strong id="checkoutTotal">ETB 0</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== END CHECKOUT SECTION ==================== -->
+
+    <!-- =====================================================
+     ROOM BOOKING MODAL
+===================================================== -->
+    <div class="booking-modal" id="bookingModal">
+      <div class="booking-backdrop" id="bookingBackdrop"></div>
+      <div class="booking-dialog">
+        <button
+          class="booking-close"
+          id="bookingClose"
+          type="button"
+          aria-label="Close booking"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="booking-header">
+          <span class="booking-label"
+            ><i class="bi bi-building"></i> ROOM BOOKING</span
+          >
+          <h2>Reserve Your <span>Room</span></h2>
+          <p>Choose your dates and complete your booking details.</p>
+        </div>
+        <div class="booking-room-summary">
+          <div class="booking-room-icon">
+            <i class="bi bi-door-open-fill"></i>
+          </div>
+          <div>
+            <span>Selected Room</span>
+            <strong id="bookingRoomName">Deluxe Guest Room</strong>
+          </div>
+          <div class="booking-room-price">
+            <strong id="bookingRoomPrice">ETB 1,500</strong>
+            <span>/ night</span>
+          </div>
+        </div>
+        <form id="bookingForm">
+          <div class="booking-form-grid">
+            <div class="booking-field">
+              <label for="checkIn">
+                <i class="bi bi-calendar-check"></i>
+                Check-in
+              </label>
+              <input type="date" id="checkIn" required />
+            </div>
+            <div class="booking-field">
+              <label for="checkOut">
+                <i class="bi bi-calendar-x"></i>
+                Check-out
+              </label>
+              <input type="date" id="checkOut" required />
+            </div>
+            <div class="booking-field">
+              <label for="guestCount">
+                <i class="bi bi-people"></i>
+                Guests
+              </label>
+              <select id="guestCount" required>
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+              </select>
+            </div>
+            <div class="booking-field">
+              <label for="guestName">
+                <i class="bi bi-person"></i>
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="guestName"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+            <div class="booking-field">
+              <label for="guestPhone">
+                <i class="bi bi-telephone"></i>
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="guestPhone"
+                placeholder="+251 9XX XXX XXX"
+                required
+              />
+            </div>
+            <div class="booking-field">
+              <label for="guestEmail">
+                <i class="bi bi-envelope"></i>
+                Email
+              </label>
+              <input
+                type="email"
+                id="guestEmail"
+                placeholder="your@email.com"
+              />
+            </div>
+          </div>
+          <div class="booking-summary">
+            <div class="booking-summary-row">
+              <span>Price per night</span>
+              <strong id="summaryPrice">ETB 1,500</strong>
+            </div>
+            <div class="booking-summary-row">
+              <span>Number of nights</span>
+              <strong id="summaryNights">0</strong>
+            </div>
+            <div class="booking-summary-row booking-total">
+              <span>Total</span>
+              <strong id="summaryTotal">ETB 0</strong>
+            </div>
+          </div>
+          <div class="booking-notice">
+            <i class="bi bi-info-circle"></i>
+            <span
+              >Your reservation will be confirmed after the booking details are
+              reviewed.</span
+            >
+          </div>
+          <button class="confirm-booking-btn" type="submit">
+            <span>Confirm Booking</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- =====================================================
+     ROOM BOOKING MODAL  CONFIRMATION 
+===================================================== -->
+    <div class="room-booking-confirmation" id="roomBookingConfirmation">
+      <div
+        class="room-confirmation-backdrop"
+        id="roomConfirmationBackdrop"
+      ></div>
+      <div class="room-confirmation-panel">
+        <button
+          class="room-confirmation-close"
+          id="roomConfirmationClose"
+          type="button"
+          aria-label="Close confirmation"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="room-confirmation-success">
+          <i class="bi bi-check-lg"></i>
+        </div>
+
+        <span class="room-confirmation-label">BOOKING REQUEST RECEIVED</span>
+
+        <h2>Thank <span>You!</span></h2>
+
+        <p class="room-confirmation-message">
+          Your room booking request has been successfully received. We will
+          contact you shortly to confirm your reservation.
+        </p>
+
+        <div class="room-booking-number">
+          <span>Booking Number</span>
+          <strong id="roomConfirmationNumber">BRK-R000000</strong>
+        </div>
+        <p class="room-confirmation-message">
+          Please pay the amount using Booking Number above within 1 hours in CBE
+          1000301369992 or E-birr/Teelebir 0932173857 otherwise it would be
+          canceled.
+        </p>
+
+        <div class="room-confirmation-details">
+          <div class="room-confirmation-detail">
+            <i class="bi bi-door-open"></i>
+            <div>
+              <span>Room</span>
+              <strong id="confirmationRoomName">Deluxe Guest Room</strong>
+            </div>
+          </div>
+
+          <div class="room-confirmation-detail">
+            <i class="bi bi-person"></i>
+            <div>
+              <span>Guest</span>
+              <strong id="confirmationGuestName">Guest Name</strong>
+            </div>
+          </div>
+
+          <div class="room-confirmation-detail">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span>Phone</span>
+              <strong id="confirmationGuestPhone">Phone</strong>
+            </div>
+          </div>
+
+          <div class="room-confirmation-detail">
+            <i class="bi bi-people"></i>
+            <div>
+              <span>Guests</span>
+              <strong id="confirmationGuestCount">2 Guests</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-confirmation-dates">
+          <div class="room-confirmation-date">
+            <span>CHECK-IN</span>
+            <strong id="confirmationCheckIn">2026-09-20</strong>
+          </div>
+
+          <i class="bi bi-arrow-right"></i>
+
+          <div class="room-confirmation-date">
+            <span>CHECK-OUT</span>
+            <strong id="confirmationCheckOut">2026-09-22</strong>
+          </div>
+        </div>
+
+        <div class="room-confirmation-summary">
+          <div>
+            <span>Price / Night</span>
+            <strong id="confirmationRoomPrice">ETB 1,500</strong>
+          </div>
+
+          <div>
+            <span>Nights</span>
+            <strong id="confirmationRoomNights">2</strong>
+          </div>
+
+          <div class="room-confirmation-total">
+            <span>Total</span>
+            <strong id="confirmationRoomTotal">ETB 3,000</strong>
+          </div>
+        </div>
+
+        <div class="room-confirmation-status">
+          <i class="bi bi-clock-history"></i>
+
+          <div>
+            <strong>Booking Status</strong>
+            <p>
+              Pending confirmation. Our team will contact you to confirm
+              availability and your reservation.
+            </p>
+          </div>
+        </div>
+
+        <button
+          class="room-confirmation-done"
+          id="roomConfirmationDone"
+          type="button"
+        >
+          <span>Done</span>
+          <i class="bi bi-check2"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- =====================================================
+     VENUE BOOKING MODAL
+===================================================== -->
+    <section id="46218" variant="document" title="Venue booking modal HTML">
+      <div class="venue-booking-modal" id="venueBookingModal">
+        <div class="venue-booking-backdrop" id="venueBookingBackdrop"></div>
+        <div class="venue-booking-panel">
+          <button
+            class="venue-booking-close"
+            id="venueBookingClose"
+            type="button"
+            aria-label="Close booking"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+          <div class="venue-booking-header">
+            <div class="venue-booking-icon"><i class="bi bi-building"></i></div>
+            <span class="section-label">VENUE BOOKING</span>
+            <h2>Book Your <span>Event Space</span></h2>
+            <p>
+              Choose your capacity, event date and payment method to submit your
+              booking request.
+            </p>
+          </div>
+          <div class="venue-selected-box">
+            <div>
+              <span>SELECTED VENUE</span>
+              <strong id="venueBookingName">Venue Name</strong>
+            </div>
+            <i class="bi bi-building"></i>
+          </div>
+          <form id="venueBookingForm">
+            <div class="venue-form-grid">
+              <div class="venue-form-group venue-full">
+                <label for="venueCapacity">Choose Capacity &amp; Package</label>
+                <div class="venue-input">
+                  <i class="bi bi-people"></i>
+                  <select id="venueCapacity" required>
+                    <option value="">Select capacity</option>
+                  </select>
+                </div>
+              </div>
+              <div class="venue-form-group">
+                <label for="venueEventDate">Event Date</label>
+                <div class="venue-input">
+                  <i class="bi bi-calendar-event"></i>
+                  <input type="date" id="venueEventDate" required />
+                </div>
+              </div>
+              <div class="venue-form-group">
+                <label for="venueEventType">Event Type</label>
+                <div class="venue-input">
+                  <i class="bi bi-calendar-heart"></i>
+                  <select id="venueEventType" required>
+                    <option value="">Select event type</option>
+                    <option value="Conference">Conference</option>
+                    <option value="Meeting">Meeting</option>
+                    <option value="Training">Training</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Private Event">Private Event</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="venue-form-group">
+                <label for="venueGuestName">Full Name</label>
+                <div class="venue-input">
+                  <i class="bi bi-person"></i>
+                  <input
+                    type="text"
+                    id="venueGuestName"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="venue-form-group">
+                <label for="venueGuestPhone">Phone Number</label>
+                <div class="venue-input">
+                  <i class="bi bi-telephone"></i>
+                  <input
+                    type="tel"
+                    id="venueGuestPhone"
+                    placeholder="09XXXXXXXX"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="venue-form-group venue-full">
+                <label for="venueGuestEmail"
+                  >Email Address <span>(Optional)</span></label
+                >
+                <div class="venue-input">
+                  <i class="bi bi-envelope"></i>
+                  <input
+                    type="email"
+                    id="venueGuestEmail"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+              <div class="venue-form-group venue-full">
+                <label>Payment Method</label>
+                <div class="venue-payment-options">
+                  <label class="venue-payment-option">
+                    <input
+                      type="radio"
+                      name="venuePaymentMethod"
+                      value="CBE"
+                      required
+                    />
+                    <span>
+                      <strong>CBE</strong>
+                      <small>Commercial Bank of Ethiopia</small>
+                    </span>
+                  </label>
+                  <label class="venue-payment-option">
+                    <input
+                      type="radio"
+                      name="venuePaymentMethod"
+                      value="Telebirr"
+                    />
+                    <span>
+                      <strong>Telebirr</strong> <small>Mobile payment</small>
+                    </span>
+                  </label>
+                  <label class="venue-payment-option">
+                    <input
+                      type="radio"
+                      name="venuePaymentMethod"
+                      value="E-Birr"
+                    />
+                    <span>
+                      <strong>E-Birr</strong> <small>Mobile payment</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div
+                class="venue-payment-instructions venue-full"
+                id="venuePaymentInstructions"
+              >
+                <div class="venue-payment-icon">
+                  <i class="bi bi-wallet2"></i>
+                </div>
+                <div>
+                  <strong id="venuePaymentTitle">Payment Information</strong>
+                  <p id="venuePaymentDescription">
+                    Select a payment method to see the account details.
+                  </p>
+                  <div class="venue-payment-account">
+                    <span id="venuePaymentAccount">-</span>
+                    <button
+                      type="button"
+                      id="venueCopyPayment"
+                      aria-label="Copy account"
+                    >
+                      <i class="bi bi-copy"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="venue-form-group venue-full">
+                <label for="venuePaymentReference"
+                  >Payment Reference / Transaction ID</label
+                >
+                <div class="venue-input">
+                  <i class="bi bi-receipt"></i>
+                  <input
+                    type="text"
+                    id="venuePaymentReference"
+                    placeholder="Enter your payment transaction ID"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="venue-form-group venue-full">
+                <label for="venueBookingNotes"
+                  >Additional Requirements <span>(Optional)</span></label
+                >
+                <textarea
+                  id="venueBookingNotes"
+                  rows="3"
+                  placeholder="Decoration, sound system, seating arrangement or other requirements..."
+                ></textarea>
+              </div>
+            </div>
+            <div class="venue-booking-summary">
+              <div>
+                <span>Venue</span> <strong id="venueSummaryName">-</strong>
+              </div>
+              <div>
+                <span>Capacity</span>
+                <strong id="venueSummaryCapacity">-</strong>
+              </div>
+              <div>
+                <span>Event Date</span> <strong id="venueSummaryDate">-</strong>
+              </div>
+              <div class="venue-summary-total">
+                <span>Total Price</span>
+                <strong id="venueSummaryTotal">ETB 0</strong>
+              </div>
+            </div>
+            <div class="venue-payment-warning">
+              <i class="bi bi-exclamation-triangle"></i>
+              <p>
+                <strong>Important:</strong> After receiving your booking number,
+                payment must be completed within <strong>2 hours</strong>.
+                Bookings without payment within this period may be cancelled.
+              </p>
+            </div>
+            <button class="venue-submit-btn" type="submit">
+              <span>Submit Booking Request</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     VENUE BOOKING MODAL  CONFIRMATION 
+===================================================== -->
+
+    <section
+      id="90543"
+      variant="document"
+      title="Venue booking confirmation HTML"
+    >
+      <div class="venue-booking-confirmation" id="venueBookingConfirmation">
+        <div
+          class="venue-confirmation-backdrop"
+          id="venueConfirmationBackdrop"
+        ></div>
+        <div class="venue-confirmation-panel">
+          <button
+            class="venue-confirmation-close"
+            id="venueConfirmationClose"
+            type="button"
+            aria-label="Close confirmation"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+          <div class="venue-confirmation-success">
+            <i class="bi bi-check-lg"></i>
+          </div>
+          <span class="confirmation-label">BOOKING REQUEST RECEIVED</span>
+          <h2>Thank <span>You!</span></h2>
+          <p class="venue-confirmation-message">
+            Your venue booking request has been received successfully. Please
+            complete your payment within 2 hours using your booking number.
+          </p>
+          <div class="venue-confirmation-number">
+            <span>Booking Number</span>
+            <strong id="venueConfirmationNumber">BRK-V000000</strong>
+          </div>
+          <div class="venue-confirmation-details">
+            <div>
+              <i class="bi bi-building"></i> <span>Venue</span>
+              <strong id="venueConfirmationVenue">-</strong>
+            </div>
+            <div>
+              <i class="bi bi-people"></i> <span>Capacity</span>
+              <strong id="venueConfirmationCapacity">-</strong>
+            </div>
+            <div>
+              <i class="bi bi-calendar-event"></i> <span>Event Date</span>
+              <strong id="venueConfirmationDate">-</strong>
+            </div>
+            <div>
+              <i class="bi bi-person"></i> <span>Customer</span>
+              <strong id="venueConfirmationCustomer">-</strong>
+            </div>
+            <div>
+              <i class="bi bi-telephone"></i> <span>Phone</span>
+              <strong id="venueConfirmationPhone">-</strong>
+            </div>
+            <div>
+              <i class="bi bi-credit-card"></i> <span>Payment</span>
+              <strong id="venueConfirmationPayment">-</strong>
+            </div>
+          </div>
+          <div class="venue-confirmation-reference">
+            <span>Payment Reference</span>
+            <strong id="venueConfirmationReference">-</strong>
+          </div>
+          <div class="venue-confirmation-total">
+            <span>Amount to Pay</span>
+            <strong id="venueConfirmationTotal">ETB 0</strong>
+          </div>
+          <div class="venue-confirmation-warning">
+            <i class="bi bi-clock-history"></i>
+            <div>
+              <strong>Payment Required Within 2 Hours</strong>
+              <p>
+                Use the booking number when making your payment. If payment is
+                not completed within 2 hours, the booking may be cancelled.
+              </p>
+            </div>
+          </div>
+          <button
+            class="venue-confirmation-done"
+            id="venueConfirmationDone"
+            type="button"
+          >
+            <span>Done</span> <i class="bi bi-check2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     SHOPPING CART
+===================================================== -->
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-backdrop" id="cartBackdrop"></div>
+      <div class="cart-panel">
+        <div class="cart-header">
+          <div>
+            <span class="cart-label"><i class="bi bi-bag"></i> YOUR ORDER</span>
+            <h2>Your <span>Cart</span></h2>
+          </div>
+          <button
+            class="cart-close"
+            id="cartClose"
+            type="button"
+            aria-label="Close cart"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="cart-body" id="cartBody">
+          <div class="cart-empty" id="cartEmpty">
+            <div class="cart-empty-icon">
+              <i class="bi bi-bag-x"></i>
+            </div>
+            <h3>Your cart is empty</h3>
+            <p>Add delicious food and drinks from our menu.</p>
+            <button class="cart-browse-btn" id="cartBrowseBtn" type="button">
+              Browse Menu
+              <i class="bi bi-arrow-down"></i>
+            </button>
+          </div>
+          <div class="cart-items" id="cartItems"></div>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+          <div class="cart-summary">
+            <div>
+              <span>Subtotal</span>
+              <strong id="cartSubtotal">ETB 0</strong>
+            </div>
+            <div>
+              <span>Delivery</span>
+              <strong id="cartDelivery">Calculated at checkout</strong>
+            </div>
+            <div class="cart-total">
+              <span>Total</span>
+              <strong id="cartTotal">ETB 0</strong>
+            </div>
+          </div>
+          <button class="cart-checkout-btn" id="cartCheckoutBtn" type="button">
+            <span>Proceed to Checkout</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== ORDER CONFIRMATION ==================== -->
+
+    <div class="order-confirmation" id="orderConfirmation">
+      <div
+        class="order-confirmation-backdrop"
+        id="orderConfirmationBackdrop"
+      ></div>
+
+      <div class="order-confirmation-panel">
+        <button
+          class="order-confirmation-close"
+          id="orderConfirmationClose"
+          type="button"
+          aria-label="Close confirmation"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="confirmation-success-icon">
+          <i class="bi bi-check-lg"></i>
+        </div>
+
+        <span class="confirmation-label">ORDER RECEIVED</span>
+
+        <h2>Thank <span>You!</span></h2>
+
+        <p class="confirmation-message">
+          Your order has been successfully received. We will process it shortly.
+        </p>
+
+        <div class="confirmation-order-number">
+          <span>Order Number</span>
+          <strong id="confirmationOrderNumber">BRK-000000</strong>
+        </div>
+
+        <div class="confirmation-details">
+          <div class="confirmation-detail">
+            <span>
+              <i class="bi bi-person"></i>
+              Customer
+            </span>
+            <strong id="confirmationCustomer">—</strong>
+          </div>
+
+          <div class="confirmation-detail">
+            <span>
+              <i class="bi bi-telephone"></i>
+              Phone
+            </span>
+            <strong id="confirmationPhone">—</strong>
+          </div>
+
+          <div class="confirmation-detail">
+            <span>
+              <i class="bi bi-bag"></i>
+              Order Type
+            </span>
+            <strong id="confirmationOrderType">—</strong>
+          </div>
+
+          <div class="confirmation-detail">
+            <span>
+              <i class="bi bi-credit-card"></i>
+              Payment
+            </span>
+            <strong id="confirmationPayment">—</strong>
+          </div>
+
+          <div class="confirmation-detail confirmation-reference">
+            <span>
+              <i class="bi bi-receipt"></i>
+              Reference
+            </span>
+            <strong id="confirmationReference">—</strong>
+          </div>
+        </div>
+
+        <div class="confirmation-items">
+          <div class="confirmation-items-header">
+            <span>YOUR ORDER</span>
+            <span id="confirmationItemCount">0 items</span>
+          </div>
+
+          <div id="confirmationItems"></div>
+        </div>
+
+        <div class="confirmation-total">
+          <span>Total Paid</span>
+          <strong id="confirmationTotal">ETB 0</strong>
+        </div>
+
+        <div class="confirmation-status">
+          <i class="bi bi-clock-history"></i>
+          <div>
+            <strong>Payment Verification</strong>
+            <p>
+              Your payment reference will be verified before the order is
+              processed.
+            </p>
+          </div>
+        </div>
+
+        <button
+          class="confirmation-done-btn"
+          id="confirmationDoneBtn"
+          type="button"
+        >
+          <span>Done</span>
+          <i class="bi bi-check2"></i>
+        </button>
+      </div>
+    </div>
+    <!-- ==================== END ORDER CONFIRMATION ==================== -->
+
+    <!-- =====================================================
+     CONTACT SECTION
+===================================================== -->
+
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <div class="section-heading contact-heading">
+          <span class="section-tag">CONTACT US</span>
+          <h2>We'd Love to <span>Hear From You</span></h2>
+          <p>
+            Have a question, need a reservation, or want to plan an event? Get
+            in touch with Berekah Hotel.
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-info-header">
+              <span class="contact-icon-main">
+                <i class="bi bi-building"></i>
+              </span>
+              <div>
+                <h3>Berekah Hotel</h3>
+                <p>Your comfort, our priority.</p>
+              </div>
+            </div>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                  <h4>Our Location</h4>
+                  <p>Addis Ababa, Ethiopia</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div>
+                  <h4>Phone</h4>
+                  <a href="tel:+251900000000">+251 900 000 000</a>
+                  <a href="tel:+251911111111">+251 911 111 111</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:info@berekahhotel.com"
+                    >info@berekahhotel.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div>
+                  <h4>Service Hours</h4>
+                  <p>Hotel & Restaurant: 24/7</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <span>Follow Us</span>
+              <div class="contact-social-links">
+                <a href="#" aria-label="Facebook"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" aria-label="Telegram"
+                  ><i class="bi bi-telegram"></i
+                ></a>
+                <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <div class="contact-form-header">
+              <span class="section-tag">SEND A MESSAGE</span>
+              <h3>Get in Touch</h3>
+              <p>Send us your message and our team will get back to you.</p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+              <div class="contact-form-row">
+                <div class="contact-field">
+                  <label for="contactName">Your Name</label>
+                  <div class="contact-input">
+                    <i class="bi bi-person"></i>
+                    <input
+                      type="text"
+                      id="contactName"
+                      name="name"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="contact-field">
+                  <label for="contactPhone">Phone Number</label>
+                  <div class="contact-input">
+                    <i class="bi bi-telephone"></i>
+                    <input
+                      type="tel"
+                      id="contactPhone"
+                      name="phone"
+                      placeholder="+251 ..."
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-field">
+                <label for="contactEmail">Email Address</label>
+                <div class="contact-input">
+                  <i class="bi bi-envelope"></i>
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                  />
+                </div>
+              </div>
+
+              <div class="contact-field">
+                <label for="contactSubject">Subject</label>
+                <div class="contact-input">
+                  <i class="bi bi-chat-left-text"></i>
+                  <input
+                    type="text"
+                    id="contactSubject"
+                    name="subject"
+                    placeholder="How can we help you?"
+                  />
+                </div>
+              </div>
+
+              <div class="contact-field">
+                <label for="contactMessage">Message</label>
+                <div class="contact-input contact-textarea">
+                  <i class="bi bi-pencil-square"></i>
+                  <textarea
+                    id="contactMessage"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message..."
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="contact-submit">
+                <span>Send Message</span>
+                <i class="bi bi-send"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <div class="contact-map-content">
+            <i class="bi bi-geo-alt-fill"></i>
+            <h3>Find Us</h3>
+            <p>Berekah Hotel · Addis Ababa, Ethiopia</p>
+            <a href="#" class="contact-map-btn">
+              <span>View on Map</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     FOOTER SECTION
+===================================================== -->
+
+    <div class="footer-wrapper">
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-main">
+            <div class="footer-brand">
+              <a href="#home" class="footer-logo">BEREKAH<span> HOTEL</span></a>
+              <p>
+                Designed and developed by <strong>Abdulfetah Shehab</strong>, a
+                Full-Stack Developer creating modern, responsive, and
+                user-friendly websites and business management systems.
+              </p>
+              <div class="footer-social">
+                <a
+                  href="https://wa.me/251932173857"
+                  aria-label="WhatsApp"
+                  target="_blank"
+                >
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+                <a
+                  href="https://github.com/abdulfetahshehab/"
+                  aria-label="GitHub"
+                  target="_blank"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
+                <a
+                  href="https://t.me/Abdul_fetah"
+                  aria-label="Telegram"
+                  target="_blank"
+                >
+                  <i class="bi bi-telegram"></i>
+                </a>
+                <a href="tel:+251932173857" aria-label="Phone">
+                  <i class="bi bi-telephone"></i>
+                </a>
+              </div>
+            </div>
+            <div class="footer-column">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Our Menu</a></li>
+                <li><a href="#rooms">Guest Rooms</a></li>
+                <li><a href="#venues">Venues</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Our Services</h4>
+              <ul>
+                <li><a href="#services">Restaurant & Dining</a></li>
+                <li><a href="#services">Guest Rooms</a></li>
+                <li><a href="#services">Conference Halls</a></li>
+                <li><a href="#services">Wedding & Events</a></li>
+                <li><a href="#services">Airport Service</a></li>
+                <li><a href="#services">Room Service</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+              <h4>Contact Us</h4>
+              <div class="footer-contact-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>Addis Ababa, Ethiopia</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-telephone"></i>
+                <a href="tel:+251900000000">+251 932 173 357</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-envelope"></i>
+                <a href="mailto:info@berekahhotel.com">abshehabece@gmail.com</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-clock"></i>
+                <span>Open 24/7</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>
+              © <span id="footerYear"></span> Berekah Hotel. All rights
+              reserved.
+            </p>
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="asset/script.js"></script>
+  </body>
+</html>
