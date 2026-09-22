@@ -2003,315 +2003,308 @@
     <!-- =====================================================
      VENUE BOOKING MODAL
 ===================================================== -->
-    <section id="46218" variant="document" title="Venue booking modal HTML">
-      <div class="venue-booking-modal" id="venueBookingModal">
-        <div class="venue-booking-backdrop" id="venueBookingBackdrop"></div>
-        <div class="venue-booking-panel">
-          <button
-            class="venue-booking-close"
-            id="venueBookingClose"
-            type="button"
-            aria-label="Close booking"
-          >
-            <i class="bi bi-x-lg"></i>
-          </button>
-          <div class="venue-booking-header">
-            <div class="venue-booking-icon"><i class="bi bi-building"></i></div>
-            <span class="section-label">VENUE BOOKING</span>
-            <h2>Book Your <span>Event Space</span></h2>
+
+    <div class="venue-booking-modal" id="venueBookingModal">
+      <div class="venue-booking-backdrop" id="venueBookingBackdrop"></div>
+      <div class="venue-booking-panel">
+        <button
+          class="venue-booking-close"
+          id="venueBookingClose"
+          type="button"
+          aria-label="Close booking"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="venue-booking-header">
+          <div class="venue-booking-icon"><i class="bi bi-building"></i></div>
+          <span class="section-label">VENUE BOOKING</span>
+          <h2>Book Your <span>Event Space</span></h2>
+          <p>
+            Choose your capacity, event date and payment method to submit your
+            booking request.
+          </p>
+        </div>
+        <div class="venue-selected-box">
+          <div>
+            <span>SELECTED VENUE</span>
+            <strong id="venueBookingName">Venue Name</strong>
+          </div>
+          <i class="bi bi-building"></i>
+        </div>
+        <form id="venueBookingForm">
+          <div class="venue-form-grid">
+            <div class="venue-form-group venue-full">
+              <label for="venueCapacity">Choose Capacity &amp; Package</label>
+              <div class="venue-input">
+                <i class="bi bi-people"></i>
+                <select id="venueCapacity" required>
+                  <option value="">Select capacity</option>
+                </select>
+              </div>
+            </div>
+            <div class="venue-form-group">
+              <label for="venueEventDate">Event Date</label>
+              <div class="venue-input">
+                <i class="bi bi-calendar-event"></i>
+                <input type="date" id="venueEventDate" required />
+              </div>
+            </div>
+            <div class="venue-form-group">
+              <label for="venueEventType">Event Type</label>
+              <div class="venue-input">
+                <i class="bi bi-calendar-heart"></i>
+                <select id="venueEventType" required>
+                  <option value="">Select event type</option>
+                  <option value="Conference">Conference</option>
+                  <option value="Meeting">Meeting</option>
+                  <option value="Training">Training</option>
+                  <option value="Workshop">Workshop</option>
+                  <option value="Wedding">Wedding</option>
+                  <option value="Birthday">Birthday</option>
+                  <option value="Private Event">Private Event</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="venue-form-group">
+              <label for="venueGuestName">Full Name</label>
+              <div class="venue-input">
+                <i class="bi bi-person"></i>
+                <input
+                  type="text"
+                  id="venueGuestName"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="venue-form-group">
+              <label for="venueGuestPhone">Phone Number</label>
+              <div class="venue-input">
+                <i class="bi bi-telephone"></i>
+                <input
+                  type="tel"
+                  id="venueGuestPhone"
+                  placeholder="09XXXXXXXX"
+                  required
+                />
+              </div>
+            </div>
+            <div class="venue-form-group venue-full">
+              <label for="venueGuestEmail"
+                >Email Address <span>(Optional)</span></label
+              >
+              <div class="venue-input">
+                <i class="bi bi-envelope"></i>
+                <input
+                  type="email"
+                  id="venueGuestEmail"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+            <div class="venue-form-group venue-full">
+              <label>Payment Method</label>
+              <div class="venue-payment-options">
+                <label class="venue-payment-option">
+                  <input
+                    type="radio"
+                    name="venuePaymentMethod"
+                    value="CBE"
+                    required
+                  />
+                  <span>
+                    <strong>CBE</strong>
+                    <small>Commercial Bank of Ethiopia</small>
+                  </span>
+                </label>
+                <label class="venue-payment-option">
+                  <input
+                    type="radio"
+                    name="venuePaymentMethod"
+                    value="Telebirr"
+                  />
+                  <span>
+                    <strong>Telebirr</strong> <small>Mobile payment</small>
+                  </span>
+                </label>
+                <label class="venue-payment-option">
+                  <input
+                    type="radio"
+                    name="venuePaymentMethod"
+                    value="E-Birr"
+                  />
+                  <span>
+                    <strong>E-Birr</strong> <small>Mobile payment</small>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div
+              class="venue-payment-instructions venue-full"
+              id="venuePaymentInstructions"
+            >
+              <div class="venue-payment-icon">
+                <i class="bi bi-wallet2"></i>
+              </div>
+              <div>
+                <strong id="venuePaymentTitle">Payment Information</strong>
+                <p id="venuePaymentDescription">
+                  Select a payment method to see the account details.
+                </p>
+                <div class="venue-payment-account">
+                  <span id="venuePaymentAccount">-</span>
+                  <button
+                    type="button"
+                    id="venueCopyPayment"
+                    aria-label="Copy account"
+                  >
+                    <i class="bi bi-copy"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="venue-form-group venue-full">
+              <label for="venuePaymentReference"
+                >Payment Reference / Transaction ID</label
+              >
+              <div class="venue-input">
+                <i class="bi bi-receipt"></i>
+                <input
+                  type="text"
+                  id="venuePaymentReference"
+                  placeholder="Enter your payment transaction ID"
+                  required
+                />
+              </div>
+            </div>
+            <div class="venue-form-group venue-full">
+              <label for="venueBookingNotes"
+                >Additional Requirements <span>(Optional)</span></label
+              >
+              <textarea
+                id="venueBookingNotes"
+                rows="3"
+                placeholder="Decoration, sound system, seating arrangement or other requirements..."
+              ></textarea>
+            </div>
+          </div>
+          <div class="venue-booking-summary">
+            <div>
+              <span>Venue</span> <strong id="venueSummaryName">-</strong>
+            </div>
+            <div>
+              <span>Capacity</span>
+              <strong id="venueSummaryCapacity">-</strong>
+            </div>
+            <div>
+              <span>Event Date</span> <strong id="venueSummaryDate">-</strong>
+            </div>
+            <div class="venue-summary-total">
+              <span>Total Price</span>
+              <strong id="venueSummaryTotal">ETB 0</strong>
+            </div>
+          </div>
+          <div class="venue-payment-warning">
+            <i class="bi bi-exclamation-triangle"></i>
             <p>
-              Choose your capacity, event date and payment method to submit your
-              booking request.
+              <strong>Important:</strong> After receiving your booking number,
+              payment must be completed within <strong>2 hours</strong>.
+              Bookings without payment within this period may be cancelled.
             </p>
           </div>
-          <div class="venue-selected-box">
-            <div>
-              <span>SELECTED VENUE</span>
-              <strong id="venueBookingName">Venue Name</strong>
-            </div>
-            <i class="bi bi-building"></i>
-          </div>
-          <form id="venueBookingForm">
-            <div class="venue-form-grid">
-              <div class="venue-form-group venue-full">
-                <label for="venueCapacity">Choose Capacity &amp; Package</label>
-                <div class="venue-input">
-                  <i class="bi bi-people"></i>
-                  <select id="venueCapacity" required>
-                    <option value="">Select capacity</option>
-                  </select>
-                </div>
-              </div>
-              <div class="venue-form-group">
-                <label for="venueEventDate">Event Date</label>
-                <div class="venue-input">
-                  <i class="bi bi-calendar-event"></i>
-                  <input type="date" id="venueEventDate" required />
-                </div>
-              </div>
-              <div class="venue-form-group">
-                <label for="venueEventType">Event Type</label>
-                <div class="venue-input">
-                  <i class="bi bi-calendar-heart"></i>
-                  <select id="venueEventType" required>
-                    <option value="">Select event type</option>
-                    <option value="Conference">Conference</option>
-                    <option value="Meeting">Meeting</option>
-                    <option value="Training">Training</option>
-                    <option value="Workshop">Workshop</option>
-                    <option value="Wedding">Wedding</option>
-                    <option value="Birthday">Birthday</option>
-                    <option value="Private Event">Private Event</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-              </div>
-              <div class="venue-form-group">
-                <label for="venueGuestName">Full Name</label>
-                <div class="venue-input">
-                  <i class="bi bi-person"></i>
-                  <input
-                    type="text"
-                    id="venueGuestName"
-                    placeholder="Enter your full name"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="venue-form-group">
-                <label for="venueGuestPhone">Phone Number</label>
-                <div class="venue-input">
-                  <i class="bi bi-telephone"></i>
-                  <input
-                    type="tel"
-                    id="venueGuestPhone"
-                    placeholder="09XXXXXXXX"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="venue-form-group venue-full">
-                <label for="venueGuestEmail"
-                  >Email Address <span>(Optional)</span></label
-                >
-                <div class="venue-input">
-                  <i class="bi bi-envelope"></i>
-                  <input
-                    type="email"
-                    id="venueGuestEmail"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-              <div class="venue-form-group venue-full">
-                <label>Payment Method</label>
-                <div class="venue-payment-options">
-                  <label class="venue-payment-option">
-                    <input
-                      type="radio"
-                      name="venuePaymentMethod"
-                      value="CBE"
-                      required
-                    />
-                    <span>
-                      <strong>CBE</strong>
-                      <small>Commercial Bank of Ethiopia</small>
-                    </span>
-                  </label>
-                  <label class="venue-payment-option">
-                    <input
-                      type="radio"
-                      name="venuePaymentMethod"
-                      value="Telebirr"
-                    />
-                    <span>
-                      <strong>Telebirr</strong> <small>Mobile payment</small>
-                    </span>
-                  </label>
-                  <label class="venue-payment-option">
-                    <input
-                      type="radio"
-                      name="venuePaymentMethod"
-                      value="E-Birr"
-                    />
-                    <span>
-                      <strong>E-Birr</strong> <small>Mobile payment</small>
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <div
-                class="venue-payment-instructions venue-full"
-                id="venuePaymentInstructions"
-              >
-                <div class="venue-payment-icon">
-                  <i class="bi bi-wallet2"></i>
-                </div>
-                <div>
-                  <strong id="venuePaymentTitle">Payment Information</strong>
-                  <p id="venuePaymentDescription">
-                    Select a payment method to see the account details.
-                  </p>
-                  <div class="venue-payment-account">
-                    <span id="venuePaymentAccount">-</span>
-                    <button
-                      type="button"
-                      id="venueCopyPayment"
-                      aria-label="Copy account"
-                    >
-                      <i class="bi bi-copy"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="venue-form-group venue-full">
-                <label for="venuePaymentReference"
-                  >Payment Reference / Transaction ID</label
-                >
-                <div class="venue-input">
-                  <i class="bi bi-receipt"></i>
-                  <input
-                    type="text"
-                    id="venuePaymentReference"
-                    placeholder="Enter your payment transaction ID"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="venue-form-group venue-full">
-                <label for="venueBookingNotes"
-                  >Additional Requirements <span>(Optional)</span></label
-                >
-                <textarea
-                  id="venueBookingNotes"
-                  rows="3"
-                  placeholder="Decoration, sound system, seating arrangement or other requirements..."
-                ></textarea>
-              </div>
-            </div>
-            <div class="venue-booking-summary">
-              <div>
-                <span>Venue</span> <strong id="venueSummaryName">-</strong>
-              </div>
-              <div>
-                <span>Capacity</span>
-                <strong id="venueSummaryCapacity">-</strong>
-              </div>
-              <div>
-                <span>Event Date</span> <strong id="venueSummaryDate">-</strong>
-              </div>
-              <div class="venue-summary-total">
-                <span>Total Price</span>
-                <strong id="venueSummaryTotal">ETB 0</strong>
-              </div>
-            </div>
-            <div class="venue-payment-warning">
-              <i class="bi bi-exclamation-triangle"></i>
-              <p>
-                <strong>Important:</strong> After receiving your booking number,
-                payment must be completed within <strong>2 hours</strong>.
-                Bookings without payment within this period may be cancelled.
-              </p>
-            </div>
-            <button class="venue-submit-btn" type="submit">
-              <span>Submit Booking Request</span>
-              <i class="bi bi-arrow-right"></i>
-            </button>
-          </form>
-        </div>
+          <button class="venue-submit-btn" type="submit">
+            <span>Submit Booking Request</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </form>
       </div>
-    </section>
+    </div>
 
     <!-- =====================================================
      VENUE BOOKING MODAL  CONFIRMATION 
 ===================================================== -->
 
-    <section
-      id="90543"
-      variant="document"
-      title="Venue booking confirmation HTML"
-    >
-      <div class="venue-booking-confirmation" id="venueBookingConfirmation">
-        <div
-          class="venue-confirmation-backdrop"
-          id="venueConfirmationBackdrop"
-        ></div>
-        <div class="venue-confirmation-panel">
-          <button
-            class="venue-confirmation-close"
-            id="venueConfirmationClose"
-            type="button"
-            aria-label="Close confirmation"
-          >
-            <i class="bi bi-x-lg"></i>
-          </button>
-          <div class="venue-confirmation-success">
-            <i class="bi bi-check-lg"></i>
-          </div>
-          <span class="confirmation-label">BOOKING REQUEST RECEIVED</span>
-          <h2>Thank <span>You!</span></h2>
-          <p class="venue-confirmation-message">
-            Your venue booking request has been received successfully. Please
-            complete your payment within 2 hours using your booking number.
-          </p>
-          <div class="venue-confirmation-number">
-            <span>Booking Number</span>
-            <strong id="venueConfirmationNumber">BRK-V000000</strong>
-          </div>
-          <div class="venue-confirmation-details">
-            <div>
-              <i class="bi bi-building"></i> <span>Venue</span>
-              <strong id="venueConfirmationVenue">-</strong>
-            </div>
-            <div>
-              <i class="bi bi-people"></i> <span>Capacity</span>
-              <strong id="venueConfirmationCapacity">-</strong>
-            </div>
-            <div>
-              <i class="bi bi-calendar-event"></i> <span>Event Date</span>
-              <strong id="venueConfirmationDate">-</strong>
-            </div>
-            <div>
-              <i class="bi bi-person"></i> <span>Customer</span>
-              <strong id="venueConfirmationCustomer">-</strong>
-            </div>
-            <div>
-              <i class="bi bi-telephone"></i> <span>Phone</span>
-              <strong id="venueConfirmationPhone">-</strong>
-            </div>
-            <div>
-              <i class="bi bi-credit-card"></i> <span>Payment</span>
-              <strong id="venueConfirmationPayment">-</strong>
-            </div>
-          </div>
-          <div class="venue-confirmation-reference">
-            <span>Payment Reference</span>
-            <strong id="venueConfirmationReference">-</strong>
-          </div>
-          <div class="venue-confirmation-total">
-            <span>Amount to Pay</span>
-            <strong id="venueConfirmationTotal">ETB 0</strong>
-          </div>
-          <div class="venue-confirmation-warning">
-            <i class="bi bi-clock-history"></i>
-            <div>
-              <strong>Payment Required Within 2 Hours</strong>
-              <p>
-                Use the booking number when making your payment. If payment is
-                not completed within 2 hours, the booking may be cancelled.
-              </p>
-            </div>
-          </div>
-          <button
-            class="venue-confirmation-done"
-            id="venueConfirmationDone"
-            type="button"
-          >
-            <span>Done</span> <i class="bi bi-check2"></i>
-          </button>
+    <div class="venue-booking-confirmation" id="venueBookingConfirmation">
+      <div
+        class="venue-confirmation-backdrop"
+        id="venueConfirmationBackdrop"
+      ></div>
+      <div class="venue-confirmation-panel">
+        <button
+          class="venue-confirmation-close"
+          id="venueConfirmationClose"
+          type="button"
+          aria-label="Close confirmation"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="venue-confirmation-success">
+          <i class="bi bi-check-lg"></i>
         </div>
+        <span class="confirmation-label">BOOKING REQUEST RECEIVED</span>
+        <h2>Thank <span>You!</span></h2>
+        <p class="venue-confirmation-message">
+          Your venue booking request has been received successfully. Please
+          complete your payment within 2 hours using your booking number.
+        </p>
+        <div class="venue-confirmation-number">
+          <span>Booking Number</span>
+          <strong id="venueConfirmationNumber">BRK-V000000</strong>
+        </div>
+        <div class="venue-confirmation-details">
+          <div>
+            <i class="bi bi-building"></i> <span>Venue</span>
+            <strong id="venueConfirmationVenue">-</strong>
+          </div>
+          <div>
+            <i class="bi bi-people"></i> <span>Capacity</span>
+            <strong id="venueConfirmationCapacity">-</strong>
+          </div>
+          <div>
+            <i class="bi bi-calendar-event"></i> <span>Event Date</span>
+            <strong id="venueConfirmationDate">-</strong>
+          </div>
+          <div>
+            <i class="bi bi-person"></i> <span>Customer</span>
+            <strong id="venueConfirmationCustomer">-</strong>
+          </div>
+          <div>
+            <i class="bi bi-telephone"></i> <span>Phone</span>
+            <strong id="venueConfirmationPhone">-</strong>
+          </div>
+          <div>
+            <i class="bi bi-credit-card"></i> <span>Payment</span>
+            <strong id="venueConfirmationPayment">-</strong>
+          </div>
+        </div>
+        <div class="venue-confirmation-reference">
+          <span>Payment Reference</span>
+          <strong id="venueConfirmationReference">-</strong>
+        </div>
+        <div class="venue-confirmation-total">
+          <span>Amount to Pay</span>
+          <strong id="venueConfirmationTotal">ETB 0</strong>
+        </div>
+        <div class="venue-confirmation-warning">
+          <i class="bi bi-clock-history"></i>
+          <div>
+            <strong>Payment Required Within 2 Hours</strong>
+            <p>
+              Use the booking number when making your payment. If payment is not
+              completed within 2 hours, the booking may be cancelled.
+            </p>
+          </div>
+        </div>
+        <button
+          class="venue-confirmation-done"
+          id="venueConfirmationDone"
+          type="button"
+        >
+          <span>Done</span> <i class="bi bi-check2"></i>
+        </button>
       </div>
-    </section>
+    </div>
 
     <!-- =====================================================
      SHOPPING CART
@@ -2776,7 +2769,11 @@
         <i class="bi bi-arrow-up"></i>
       </button>
     </div>
-
+    <!-- Toast -->
+    <div class="cart-toast" id="cartToast">
+      Its Added to your cart/bag 👜, to proceed with ORDER process<br />
+      click the cart icon on the header/Top.
+    </div>
     <!-- Custom JavaScript -->
     <script src="asset/script.js"></script>
   </body>

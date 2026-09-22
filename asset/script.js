@@ -365,6 +365,7 @@ addCartButtons.forEach((button) => {
 
     updateCart();
     showAddedState(button);
+    showCartToast();
   });
 });
 
@@ -376,7 +377,20 @@ function showAddedState(button) {
   setTimeout(() => {
     button.classList.remove("added");
     button.innerHTML = originalHTML;
-  }, 1000);
+  }, 2000);
+}
+const cartToast = document.getElementById("cartToast");
+let cartToastTimer;
+
+function showCartToast() {
+  if (!cartToast) return;
+
+  clearTimeout(cartToastTimer);
+  cartToast.classList.add("show");
+
+  cartToastTimer = setTimeout(() => {
+    cartToast.classList.remove("show");
+  }, 5000);
 }
 
 /* =====================================================
