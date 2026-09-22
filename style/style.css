@@ -343,14 +343,14 @@ body {
   .hotel-name {
     font-size: 19px;
   }
-  /* .hotel-subtitle {
+  .hotel-subtitle {
     font-size: 12px;
     letter-spacing: 1px;
-  } */
+  }
   .navbar-actions {
     gap: 3px;
   }
-  /* .cart-btn,
+  .cart-btn,
   .navbar-toggler {
     width: 38px;
     height: 38px;
@@ -363,12 +363,11 @@ body {
   }
   .order-btn {
     height: 30px;
-    font-size: 12px;
-    padding: 5px 8px;
+    padding: 5px 9px;
   }
   .order-btn i {
     display: none;
-  } */
+  }
   .navbar-menu {
     left: 8px;
     right: 8px;
